@@ -5,6 +5,16 @@ def calculate_fare(second_stopped, second_moving, stop_rate, moving_rate, suitca
     fare = second_stopped * stop_rate + second_moving * moving_rate + suitCaseFare
     return fare
 
+def print_ticket(stop_time, moving_time, suitcaseCount, total_fare):
+    total_time = stop_time + moving_time
+    print("\n====== RECIBO TAXÍMETRO ======")
+    print(f"Tiempo detenido: {stop_time:.1f} segundos")
+    print(f"Tiempo en movimiento: {moving_time:.1f} segundos")
+    print(f"Maletas cargadas: {suitcaseCount}")
+    print(f"Tiempo total del trayecto: {total_time:.1f} segundos")
+    print(f"Precio total a pagar: {total_fare:.2f} €")
+    print("==============================\n")
+
 def taximeter():
     print("🚕 Bienvenido al Taxímetro CLI")
     print("Este programa calcula el coste de un trayecto en taxi.")
@@ -83,6 +93,17 @@ def taximeter():
                 print(f"Maletas cargadas: {suitcaseCount}")
                 print(f"Precio total: {total_fare:.2f} €")
 
+                # Preguntar si quiere recibo
+                while True:
+                    want_receipt = input("¿Deseas un recibo? (s/n): ").strip().lower()
+                    if want_receipt == "s":
+                        print_ticket(stop_time, moving_time, suitcaseCount, total_fare)
+                        break
+                    elif want_receipt == "n":
+                        break
+                    else:
+                        print("Por favor, responde con 's' o 'n'.")
+
                 trip_active = False
                 state = None
 
@@ -114,8 +135,16 @@ def taximeter():
                     print(f"Maletas cargadas: {suitcaseCount}")
                     print(f"Precio total: {total_fare:.2f} €")
 
+                    # Preguntar si quiere recibo
+                    while True:
+                        want_receipt = input("¿Deseas un recibo? (s/n): ").strip().lower()
+                        if want_receipt == "s":
+                            print_ticket(stop_time, moving_time, suitcaseCount, total_fare)
+                            break
+                        elif want_receipt == "n":
+                            break
+                        else:
+                            print("Por favor, responde con 's' o 'n'.")
+
                 print("Gracias por usar el taxímetro.")
                 return  # salir del programa completamente
-
-# if __name__ == "__main__":
-#     taximeter()
