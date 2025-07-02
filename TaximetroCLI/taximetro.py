@@ -1,14 +1,27 @@
 # taximetro
 import time
 
-def calculate_fare(second_stopped, second_moving):
-    fare = second_stopped * 0.02 + second_moving * 0.05
+def calculate_fare(second_stopped, second_moving, stop_rate, moving_rate , suitcase , suitcaseCount):
+    suitCaseFare = suitcaseCount * suitcase
+    fare = second_stopped * stop_rate + second_moving * moving_rate + suitCaseFare
     return fare
 
 def taximeter():
 
     print("🚕 Bienvenido al Taxímetro CLI")
     print("Este programa calcula el coste de un trayecto en taxi.")
+
+    # Configuración de tarifas personalizadas
+    while True:
+        try:
+            stop_rate = float(input('Ingrese el precio por segundo detenido (ej. 0.02): '))
+            moving_rate = float(input('Ingrese el precio por segundo en movimiento (ej. 0.05): '))
+            suitcase = float(input('Ingrese el precio por suitcase (ej. 2): '))
+            suitcaseCount = float(input('Ingrese cuantas maletas llevará): '))
+            break
+        except ValueError:
+            print("Por favor, ingrese un número válido.")
+
     print("Comandos : start, stop, moving , finish, exit")
 
     trip_active = False
@@ -63,10 +76,11 @@ def taximeter():
             else: 
                 moving_time += duration
             
-            total_fare = calculate_fare(stop_time, moving_time)
+            total_fare = calculate_fare(stop_time, moving_time, stop_rate, moving_rate, suitcase, suitcaseCount)
 
             print(f"tiempo detenido : {stop_time : .1f}")
             print(f"tiempo en movimiento : {moving_time : .1f}")
+            print(f"maletas cargadas : {suitcaseCount}")
             print(f"precio total : {total_fare : .1f}")
             
             trip_active = False
