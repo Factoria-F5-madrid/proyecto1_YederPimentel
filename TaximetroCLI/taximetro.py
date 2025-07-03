@@ -1,4 +1,14 @@
 import time
+import logging
+
+#Empezamos con la configuracion del sistema de logs
+
+logging.basicConfig(
+    filename="../logs/taximetro.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
 
 def calculate_fare(second_stopped, second_moving, stop_rate, moving_rate, suitcase, suitcaseCount):
     suitCaseFare = suitcaseCount * suitcase
@@ -14,10 +24,12 @@ def print_ticket(stop_time, moving_time, suitcaseCount, total_fare):
     print(f"Tiempo total del trayecto: {total_time:.1f} segundos")
     print(f"Precio total a pagar: {total_fare:.2f} €")
     print("==============================\n")
+    logging.info("Se ha generado un recibo de viaje.")
 
 def taximeter():
     print("🚕 Bienvenido al Taxímetro CLI")
     print("Este programa calcula el coste de un trayecto en taxi.")
+    logging.info("Se ha iniciado el programa.")
 
     while True:  # Bucle principal para múltiples trayectos
 
@@ -31,6 +43,7 @@ def taximeter():
                 break
             except ValueError:
                 print("Por favor, ingrese un número válido.")
+                logging.error("Error de entrada en las tarifas o maletas")
 
         print("Comandos: start, stop, moving, finish, exit")
 
@@ -43,6 +56,7 @@ def taximeter():
 
         while True:
             command = input("> ").strip().lower()
+            logging.info(f"Se ha introducido el comando: {command}")
 
             if command == "start":
                 if trip_active:
@@ -56,6 +70,7 @@ def taximeter():
                 state = "stop"
                 state_start_time = time.time()
                 print("Viaje iniciado.")
+                logging.info("Se ha iniciado un nuevo trayecto.")
 
             elif command in ["stop", "moving"]:
                 if not trip_active: 
@@ -72,6 +87,7 @@ def taximeter():
                 state = "stop" if command == "stop" else "moving"
                 state_start_time = time.time()
                 print(f"Estado cambiado a: {state}")
+                logging.info(f"Se ha cambiado el estado a: {state}")
 
             elif command == "finish":
                 if not trip_active:
@@ -92,6 +108,7 @@ def taximeter():
                 print(f"Tiempo en movimiento: {moving_time:.1f} s")
                 print(f"Maletas cargadas: {suitcaseCount}")
                 print(f"Precio total: {total_fare:.2f} €")
+                logging.info(f"Se ha terminado el trayecto. Tiempo detenido: {stop_time:.1f} s, Tiempo en movimiento: {moving_time:.1f} s, Maletas cargadas: {suitcaseCount}, Precio total: {total_fare:.2f} €")
 
                 # Preguntar si quiere recibo
                 while True:
@@ -114,6 +131,7 @@ def taximeter():
                         break  # rompe solo el bucle del trayecto actual
                     elif respuesta == "n":
                         print("Gracias por usar el taxímetro.")
+                        logging.info("El usuario ha salido del programa")
                         return
                     else:
                         print("Opción no válida. Escribe 's' o 'n'.")
@@ -134,6 +152,7 @@ def taximeter():
                     print(f"Tiempo en movimiento: {moving_time:.1f} s")
                     print(f"Maletas cargadas: {suitcaseCount}")
                     print(f"Precio total: {total_fare:.2f} €")
+                    logging.info(f"Se ha terminado el trayecto. Tiempo detenido: {stop_time:.1f} s, Tiempo en movimiento: {moving_time:.1f} s, Maletas cargadas: {suitcaseCount}, Precio total: {total_fare:.2f} €")
 
                     # Preguntar si quiere recibo
                     while True:
@@ -147,4 +166,5 @@ def taximeter():
                             print("Por favor, responde con 's' o 'n'.")
 
                 print("Gracias por usar el taxímetro.")
+                logging.info("El usuario ha salido del programa")
                 return  # salir del programa completamente
