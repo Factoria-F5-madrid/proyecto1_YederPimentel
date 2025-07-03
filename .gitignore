@@ -6,6 +6,7 @@ env/
 # Archivos de Python generados
 # Python cache
 __pycache__/
+.pytest_cache
 *.pyc
 *.pyo
 *.pyd

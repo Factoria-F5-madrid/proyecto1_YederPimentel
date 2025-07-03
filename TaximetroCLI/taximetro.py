@@ -1,3 +1,5 @@
+import os 
+from datetime import datetime
 import time
 import logging
 
@@ -14,6 +16,17 @@ def calculate_fare(second_stopped, second_moving, stop_rate, moving_rate, suitca
     suitCaseFare = suitcaseCount * suitcase
     fare = second_stopped * stop_rate + second_moving * moving_rate + suitCaseFare
     return fare
+
+def history_trips(stop_time, moving_time, suitcaseCount, total_fare):
+    os.makedirs("../history", exist_ok=True)
+    with open("../history/historico.txt", "a", encoding="utf-8") as f:
+        f.write("==== Nuevo Trayecto ====\n")
+        f.write(f"Fecha y hora: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write(f"Tiempo detenido: {stop_time:.1f} segundos\n")
+        f.write(f"Tiempo en movimiento: {moving_time:.1f} segundos\n")
+        f.write(f"Maletas cargadas: {suitcaseCount}\n")
+        f.write(f"Precio total: {total_fare:.2f} €\n")
+        f.write("========================\n\n")
 
 def print_ticket(stop_time, moving_time, suitcaseCount, total_fare):
     total_time = stop_time + moving_time
@@ -104,6 +117,8 @@ def taximeter():
                 # Calcular tarifa total
                 total_fare = calculate_fare(stop_time, moving_time, stop_rate, moving_rate, suitcase, suitcaseCount)
 
+                history_trips(stop_time, moving_time, suitcaseCount, total_fare)
+
                 print(f"Tiempo detenido: {stop_time:.1f} s")
                 print(f"Tiempo en movimiento: {moving_time:.1f} s")
                 print(f"Maletas cargadas: {suitcaseCount}")
@@ -147,6 +162,8 @@ def taximeter():
                         moving_time += duration
 
                     total_fare = calculate_fare(stop_time, moving_time, stop_rate, moving_rate, suitcase, suitcaseCount)
+
+                    history_trips(stop_time, moving_time, suitcaseCount, total_fare)
 
                     print(f"Tiempo detenido: {stop_time:.1f} s")
                     print(f"Tiempo en movimiento: {moving_time:.1f} s")

@@ -1,0 +1,8 @@
+==== Nuevo Trayecto ====
+Fecha y hora: 2025-07-03 22:36:00
+Tiempo detenido: 6.7 segundos
+Tiempo en movimiento: 8.3 segundos
+Maletas cargadas: 2.0
+Precio total: 4.55 €
+========================
+
