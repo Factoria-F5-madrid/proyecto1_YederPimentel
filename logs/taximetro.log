@@ -20,3 +20,25 @@
 2025-07-03 22:36:01,003 - INFO - Se ha terminado el trayecto. Tiempo detenido: 6.7 s, Tiempo en movimiento: 8.3 s, Maletas cargadas: 2.0, Precio total: 4.55 €
 2025-07-03 22:36:04,286 - INFO - Se ha generado un recibo de viaje.
 2025-07-03 22:36:06,588 - INFO - El usuario ha salido del programa
+2025-07-03 23:34:42,039 - INFO - Se ha iniciado el programa.
+2025-07-03 23:35:13,990 - INFO - Se ha introducido el comando: start
+2025-07-03 23:35:13,990 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-03 23:35:15,710 - INFO - Se ha introducido el comando: moving
+2025-07-03 23:35:15,710 - INFO - Se ha cambiado el estado a: moving
+2025-07-03 23:35:20,950 - INFO - Se ha introducido el comando: stop
+2025-07-03 23:35:20,950 - INFO - Se ha cambiado el estado a: stop
+2025-07-03 23:35:22,790 - INFO - Se ha introducido el comando: moving
+2025-07-03 23:35:22,790 - INFO - Se ha cambiado el estado a: moving
+2025-07-03 23:35:24,694 - INFO - Se ha introducido el comando: finish
+2025-07-03 23:35:24,704 - INFO - Se ha terminado el trayecto. Tiempo detenido: 3.6 s, Tiempo en movimiento: 7.1 s, Maletas: 2.0, Precio: 4.56 €
+2025-07-03 23:35:27,912 - INFO - Se ha generado un recibo de viaje.
+2025-07-03 23:35:29,894 - INFO - El usuario ha salido del programa
+2025-07-04 22:55:44,426 - INFO - Se ha iniciado el programa.
+2025-07-04 22:56:14,620 - INFO - Se ha introducido el comando: start
+2025-07-04 22:56:14,620 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-04 22:56:17,780 - INFO - Se ha introducido el comando: moving
+2025-07-04 22:56:17,780 - INFO - Se ha cambiado el estado a: moving
+2025-07-04 22:56:24,244 - INFO - Se ha introducido el comando: finish
+2025-07-04 22:56:24,977 - INFO - Se ha terminado el trayecto. Tiempo detenido: 3.2 s, Tiempo en movimiento: 6.5 s, Maletas: 2.0, Precio: 4.50 €
+2025-07-04 22:56:30,430 - INFO - Se ha generado un recibo de viaje.
+2025-07-04 22:56:36,156 - INFO - El usuario ha salido del programa
