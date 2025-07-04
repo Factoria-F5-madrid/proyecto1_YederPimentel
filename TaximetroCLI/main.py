@@ -1,5 +1,5 @@
-from taximetro import taximeter
-
+from taximetro import Taximetro
 
 if __name__ == "__main__":
-    taximeter()
+    app = Taximetro()
+    app.run()

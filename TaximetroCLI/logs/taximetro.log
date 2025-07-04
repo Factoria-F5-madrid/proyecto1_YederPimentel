@@ -1,0 +1,18 @@
+2025-07-04 23:36:18,751 - INFO - Se ha iniciado el programa.
+2025-07-04 23:36:28,083 - INFO - Se ha introducido el comando: start
+2025-07-04 23:36:28,083 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-04 23:36:29,468 - INFO - Se ha introducido el comando: moving
+2025-07-04 23:36:29,468 - INFO - Estado cambiado a: moving
+2025-07-04 23:36:33,900 - INFO - Se ha introducido el comando: finish
+2025-07-04 23:36:33,953 - INFO - Trayecto finalizado
+2025-07-04 23:36:35,853 - INFO - Se ha generado un recibo de viaje.
+2025-07-04 23:36:39,787 - INFO - El usuario ha salido del programa
+2025-07-04 23:37:38,755 - INFO - Se ha iniciado el programa.
+2025-07-04 23:37:44,587 - INFO - Se ha introducido el comando: start
+2025-07-04 23:37:44,588 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-04 23:37:47,539 - INFO - Se ha introducido el comando: moving
+2025-07-04 23:37:47,539 - INFO - Estado cambiado a: moving
+2025-07-04 23:37:51,555 - INFO - Se ha introducido el comando: finish
+2025-07-04 23:37:51,566 - INFO - Trayecto finalizado
+2025-07-04 23:37:54,781 - INFO - Se ha generado un recibo de viaje.
+2025-07-04 23:37:56,531 - INFO - El usuario ha salido del programa
