@@ -47,10 +47,8 @@ class Taximetro:
             return 0.025, 0.06, "Hora Punta Mañana"
         elif 17 <= hour < 19:
             return 0.025, 0.06, "Hora Punta Tarde"
-        elif 0 <= hour < 3:
+        elif 22 <= hour or hour < 5:  # Desde 22:00 hasta 2:59 AM
             return 0.03, 0.07, "Nocturna"
-        elif 10 <= hour < 16:
-            return 0.015, 0.035, "Valle"
         else:
             return 0.02, 0.04, "Normal"
 

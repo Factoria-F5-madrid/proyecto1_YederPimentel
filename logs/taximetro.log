@@ -42,3 +42,33 @@
 2025-07-04 22:56:24,977 - INFO - Se ha terminado el trayecto. Tiempo detenido: 3.2 s, Tiempo en movimiento: 6.5 s, Maletas: 2.0, Precio: 4.50 €
 2025-07-04 22:56:30,430 - INFO - Se ha generado un recibo de viaje.
 2025-07-04 22:56:36,156 - INFO - El usuario ha salido del programa
+2025-07-04 23:29:36,315 - INFO - Se ha iniciado el programa.
+2025-07-04 23:32:18,761 - INFO - Se ha iniciado el programa.
+2025-07-04 23:32:24,534 - INFO - Se ha iniciado el programa.
+2025-07-04 23:32:34,786 - ERROR - Error de entrada en tarifas/maletas
+2025-07-04 23:32:45,442 - INFO - Se ha introducido el comando: 2
+2025-07-04 23:32:46,138 - INFO - Se ha introducido el comando: 2
+2025-07-04 23:32:46,490 - INFO - Se ha introducido el comando: 2
+2025-07-04 23:32:48,186 - INFO - Se ha introducido el comando: clear
+2025-07-04 23:32:50,034 - INFO - Se ha introducido el comando: start
+2025-07-04 23:32:50,034 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-04 23:33:04,379 - INFO - Se ha iniciado el programa.
+2025-07-04 23:38:43,519 - INFO - Se ha iniciado el programa.
+2025-07-04 23:38:49,324 - INFO - Se ha introducido el comando: start
+2025-07-04 23:38:49,324 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-04 23:38:51,459 - INFO - Se ha introducido el comando: moving
+2025-07-04 23:38:51,460 - INFO - Estado cambiado a: moving
+2025-07-04 23:38:56,267 - INFO - Se ha introducido el comando: finish
+2025-07-04 23:38:56,282 - INFO - Trayecto finalizado
+2025-07-04 23:38:57,733 - INFO - Se ha generado un recibo de viaje.
+2025-07-04 23:39:02,732 - INFO - El usuario ha salido del programa
+2025-07-06 22:20:56,059 - INFO - Se ha iniciado el programa.
+2025-07-06 22:21:55,147 - INFO - Se ha iniciado el programa.
+2025-07-06 22:24:48,236 - INFO - Se ha iniciado el programa.
+2025-07-06 22:26:01,588 - INFO - Se ha iniciado el programa.
+2025-07-06 22:26:13,628 - INFO - Se ha iniciado el programa.
+2025-07-06 22:30:49,673 - INFO - Se ha iniciado el programa.
+2025-07-06 22:31:12,744 - INFO - Se ha iniciado el programa.
+2025-07-06 22:31:14,511 - ERROR - Error de entrada en las maletas
+2025-07-06 22:33:26,032 - INFO - Se ha iniciado el programa.
+2025-07-06 22:33:28,048 - ERROR - Error de entrada en las maletas
