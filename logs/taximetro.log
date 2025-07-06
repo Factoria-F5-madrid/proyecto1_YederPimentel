@@ -72,3 +72,57 @@
 2025-07-06 22:31:14,511 - ERROR - Error de entrada en las maletas
 2025-07-06 22:33:26,032 - INFO - Se ha iniciado el programa.
 2025-07-06 22:33:28,048 - ERROR - Error de entrada en las maletas
+2025-07-06 23:19:31,079 - INFO - Se ha iniciado el programa.
+2025-07-06 23:19:41,984 - INFO - Se ha introducido el comando: start
+2025-07-06 23:19:41,984 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-06 23:19:44,696 - INFO - Se ha introducido el comando: moving
+2025-07-06 23:19:44,696 - INFO - Estado cambiado a: moving
+2025-07-06 23:19:48,792 - INFO - Se ha introducido el comando: finish
+2025-07-06 23:19:48,832 - INFO - Trayecto finalizado
+2025-07-06 23:19:55,673 - INFO - Se ha generado un recibo de viaje.
+2025-07-06 23:20:00,224 - INFO - El usuario ha salido del programa
+2025-07-06 23:21:43,592 - INFO - Se ha iniciado el programa.
+2025-07-06 23:21:56,313 - INFO - Se ha introducido el comando: start
+2025-07-06 23:21:56,313 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-06 23:21:59,560 - INFO - Se ha introducido el comando: moving
+2025-07-06 23:21:59,561 - INFO - Estado cambiado a: moving
+2025-07-06 23:22:01,864 - INFO - Se ha introducido el comando: finish
+2025-07-06 23:22:01,894 - INFO - Trayecto finalizado
+2025-07-06 23:22:03,066 - INFO - Se ha generado un recibo de viaje.
+2025-07-06 23:22:05,536 - INFO - El usuario ha salido del programa
+2025-07-06 23:25:29,550 - INFO - Se ha iniciado el programa.
+2025-07-06 23:25:35,001 - INFO - Se ha introducido el comando: start
+2025-07-06 23:25:35,001 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-06 23:25:38,857 - INFO - Se ha introducido el comando: finish
+2025-07-06 23:25:38,909 - INFO - Trayecto finalizado
+2025-07-06 23:25:40,268 - INFO - Se ha generado un recibo de viaje.
+2025-07-06 23:25:41,097 - INFO - El usuario ha salido del programa
+2025-07-06 23:57:28,135 - INFO - Se ha iniciado el programa.
+2025-07-06 23:57:40,439 - INFO - Se ha introducido el comando: start
+2025-07-06 23:57:40,440 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-06 23:57:42,127 - INFO - Se ha introducido el comando: moving
+2025-07-06 23:57:42,127 - INFO - Estado cambiado a: moving
+2025-07-06 23:57:49,943 - INFO - Se ha introducido el comando: finish
+2025-07-06 23:57:49,955 - INFO - Trayecto finalizado
+2025-07-06 23:57:51,672 - INFO - Se ha generado un recibo de viaje.
+2025-07-06 23:57:57,191 - INFO - El usuario ha salido del programa
+2025-07-06 23:58:22,043 - INFO - Se ha iniciado el programa.
+2025-07-06 23:58:26,727 - INFO - Se ha introducido el comando: start
+2025-07-06 23:58:26,727 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-06 23:58:27,935 - INFO - Se ha introducido el comando: moving
+2025-07-06 23:58:27,935 - INFO - Estado cambiado a: moving
+2025-07-06 23:58:30,086 - INFO - Se ha introducido el comando: finish
+2025-07-06 23:58:30,092 - INFO - Trayecto finalizado
+2025-07-06 23:58:31,360 - INFO - Se ha generado un recibo de viaje.
+2025-07-06 23:58:33,119 - INFO - El usuario ha salido del programa
+2025-07-07 00:26:22,538 - INFO - Se ha iniciado el programa.
+2025-07-07 00:40:14,091 - INFO - Se ha iniciado el programa.
+2025-07-07 00:40:21,934 - ERROR - Error de entrada en las maletas
+2025-07-07 00:40:27,734 - INFO - Se ha introducido el comando: start
+2025-07-07 00:40:27,734 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-07 00:40:28,638 - INFO - Se ha introducido el comando: moving
+2025-07-07 00:40:28,638 - INFO - Estado cambiado a: moving
+2025-07-07 00:40:31,119 - INFO - Se ha introducido el comando: finish
+2025-07-07 00:40:31,124 - INFO - Trayecto finalizado
+2025-07-07 00:40:32,928 - INFO - Se ha generado un recibo de viaje.
+2025-07-07 00:40:36,390 - INFO - El usuario ha salido del programa

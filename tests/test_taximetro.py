@@ -4,7 +4,7 @@ import os
 # Añadir el path del módulo a sys.path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'taximetrocli')))
 
-from taximetro import calculate_fare
+from taximetro import calculate_fare ## revisa el test
 
 def test_calculate_fare():
      assert calculate_fare(10, 20, 0.02, 0.05, 2, 1) == (10*0.02 + 20*0.05 + 2)

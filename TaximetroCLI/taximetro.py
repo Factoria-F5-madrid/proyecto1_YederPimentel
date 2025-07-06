@@ -3,11 +3,20 @@ from datetime import datetime
 import time
 import logging
 
+
 class Taximetro:
     def __init__(self):
-        os.makedirs("logs", exist_ok=True)
+        # Ruta absoluta a la raíz del proyecto (una carpeta arriba de TaximetroCLI)
+        base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        self.log_dir = os.path.join(base_dir, "logs")
+        self.history_dir = os.path.join(base_dir, "history")
+
+        # Crear carpetas si no existen
+        os.makedirs(self.log_dir, exist_ok=True)
+        os.makedirs(self.history_dir, exist_ok=True)
+
         logging.basicConfig(
-            filename="../logs/taximetro.log",
+            filename=os.path.join(self.log_dir, "taximetro.log"),
             level=logging.INFO,
             format="%(asctime)s - %(levelname)s - %(message)s"
         )
@@ -18,8 +27,7 @@ class Taximetro:
         return fare
 
     def history_trips(self, stop_time, moving_time, suitcaseCount, total_fare):
-        os.makedirs("history", exist_ok=True)
-        with open("../history/historico.txt", "a", encoding="utf-8") as f:
+        with open(os.path.join(self.history_dir, "historico.txt"), "a", encoding="utf-8") as f:
             f.write("==== Nuevo Trayecto ====\n")
             f.write(f"Fecha y hora: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
             f.write(f"Tiempo detenido: {stop_time:.1f} segundos\n")
@@ -47,7 +55,7 @@ class Taximetro:
             return 0.025, 0.06, "Hora Punta Mañana"
         elif 17 <= hour < 19:
             return 0.025, 0.06, "Hora Punta Tarde"
-        elif 22 <= hour or hour < 5:  # Desde 22:00 hasta 2:59 AM
+        elif 22 <= hour or hour < 5:  # Desde 22:00 hasta 4:59 AM
             return 0.03, 0.07, "Nocturna"
         else:
             return 0.02, 0.04, "Normal"
