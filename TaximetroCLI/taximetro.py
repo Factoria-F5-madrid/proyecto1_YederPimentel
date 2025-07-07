@@ -60,21 +60,22 @@ class Taximetro:
         else:
             return 0.02, 0.04, "Normal"
 
-    def apply_multipliers(self, stop_rate, moving_rate):
-        multiplier = 1.0
+    def apply_multipliers(self, stop_rate, moving_rate, lluvia=False, evento=False):
         razones = []
+        multiplicador = 1.0
 
-        lluvia = input("¿Está lloviendo? (s/n): ").strip().lower()
-        if lluvia == "s":
-            multiplier *= 1.2
+        if lluvia:
+            multiplicador *= 1.5
             razones.append("Lluvia")
+        if evento:
+            multiplicador *= 2.0
+            razones.append("Evento especial")
 
-        evento = input("¿Hay evento especial? (s/n): ").strip().lower()
-        if evento == "s":
-            multiplier *= 1.3
-            razones.append("Evento")
+        stop_rate *= multiplicador
+        moving_rate *= multiplicador
 
-        return stop_rate * multiplier, moving_rate * multiplier, razones, multiplier
+        return stop_rate, moving_rate, razones, multiplicador
+
 
     def run(self):
         print("🚕 Bienvenido al Taxímetro CLI")

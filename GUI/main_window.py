@@ -19,6 +19,8 @@ class TaximetroApp:
         self.suitcase = 0
         self.suitcase_count = 0
 
+        self.tarifa_info = None  # se actualizará en calcular tarifa
+
         self.build_ui()
 
     def build_ui(self):
@@ -30,15 +32,20 @@ class TaximetroApp:
         self.suitcase_count_entry = tk.Entry(self.root)
         self.suitcase_count_entry.grid(row=1, column=1)
 
+        self.lluvia_var = tk.BooleanVar()
+        self.evento_var = tk.BooleanVar()
+        tk.Checkbutton(self.root, text="🌧 Lluvia", variable=self.lluvia_var).grid(row=2, column=0, sticky="w")
+        tk.Checkbutton(self.root, text="🎉 Evento especial", variable=self.evento_var).grid(row=2, column=1, sticky="w")
+
         self.tarifa_label = tk.Label(self.root, text="⏳ Tarifa no calculada")
-        self.tarifa_label.grid(row=2, column=0, columnspan=2, pady=10)
+        self.tarifa_label.grid(row=3, column=0, columnspan=2, pady=10)
 
-        tk.Button(self.root, text="Calcular tarifa", command=self.mostrar_tarifas).grid(row=3, column=0, columnspan=2, pady=5)
+        tk.Button(self.root, text="Calcular tarifa", command=self.mostrar_tarifas).grid(row=4, column=0, columnspan=2, pady=5)
 
-        tk.Button(self.root, text="▶️ Iniciar viaje", command=self.iniciar_viaje).grid(row=4, column=0)
-        tk.Button(self.root, text="⏸️ Detenido", command=lambda: self.cambiar_estado("stop")).grid(row=4, column=1)
-        tk.Button(self.root, text="🚗 En movimiento", command=lambda: self.cambiar_estado("moving")).grid(row=5, column=0)
-        tk.Button(self.root, text="⛔ Finalizar viaje", command=self.finalizar_viaje).grid(row=5, column=1)
+        tk.Button(self.root, text="▶️ Iniciar viaje", command=self.iniciar_viaje).grid(row=5, column=0)
+        tk.Button(self.root, text="⏸️ Detenido", command=lambda: self.cambiar_estado("stop")).grid(row=5, column=1)
+        tk.Button(self.root, text="🚗 En movimiento", command=lambda: self.cambiar_estado("moving")).grid(row=6, column=0)
+        tk.Button(self.root, text="⛔ Finalizar viaje", command=self.finalizar_viaje).grid(row=6, column=1)
 
     def mostrar_tarifas(self):
         try:
@@ -48,8 +55,13 @@ class TaximetroApp:
             messagebox.showerror("Error", "Introduce valores válidos para las maletas")
             return
 
+        lluvia = self.lluvia_var.get()
+        evento = self.evento_var.get()
+
         stop_rate_base, moving_rate_base, franja = self.taximetro.get_time_based_rates()
-        stop_rate, moving_rate, razones, multiplicador = self.taximetro.apply_multipliers(stop_rate_base, moving_rate_base)
+        stop_rate, moving_rate, razones, multiplicador = self.taximetro.apply_multipliers(
+            stop_rate_base, moving_rate_base, lluvia, evento
+        )
 
         self.tarifa_info = (stop_rate, moving_rate)
         texto = f"Tarifa: {franja} - Detenido: {stop_rate:.3f} €/s - En movimiento: {moving_rate:.3f} €/s"
@@ -77,7 +89,7 @@ class TaximetroApp:
         duracion = time.time() - self.state_start_time
         if self.state == "stop":
             self.stop_time += duracion
-        else:
+        elif self.state == "moving":
             self.moving_time += duracion
 
         self.state = nuevo_estado
@@ -92,12 +104,25 @@ class TaximetroApp:
         duracion = time.time() - self.state_start_time
         if self.state == "stop":
             self.stop_time += duracion
-        else:
+        elif self.state == "moving":
             self.moving_time += duracion
 
+        if not self.tarifa_info:
+            messagebox.showwarning("Advertencia", "Primero debes calcular la tarifa")
+            return
+
         stop_rate, moving_rate = self.tarifa_info
-        total = self.taximetro.calculate_fare(self.stop_time, self.moving_time, stop_rate, moving_rate, self.suitcase, self.suitcase_count)
+        total = self.taximetro.calculate_fare(
+            self.stop_time, self.moving_time,
+            stop_rate, moving_rate,
+            self.suitcase, self.suitcase_count
+        )
+
         self.taximetro.history_trips(self.stop_time, self.moving_time, self.suitcase_count, total)
+
+        mostrar_recibo = messagebox.askyesno("Recibo", "¿Deseas ver y guardar el recibo?")
+        if mostrar_recibo:
+            self.taximetro.print_ticket(self.stop_time, self.moving_time, self.suitcase_count, total)
 
         recibo = (
             f"Detenido: {self.stop_time:.1f}s\n"
@@ -105,7 +130,24 @@ class TaximetroApp:
             f"Maletas: {self.suitcase_count}\n"
             f"Total: {total:.2f} €"
         )
-
         messagebox.showinfo("Recibo final", recibo)
+
+        nuevo = messagebox.askyesno("Nuevo viaje", "¿Quieres hacer otro viaje?")
+        if nuevo:
+            self.reiniciar()
+        else:
+            messagebox.showinfo("Gracias", "Gracias por usar el taxímetro")
+            self.root.destroy()
+
+    def reiniciar(self):
         self.trip_active = False
+        self.stop_time = 0
+        self.moving_time = 0
         self.state = None
+        self.state_start_time = 0
+        self.tarifa_info = None
+        self.tarifa_label.config(text="⏳ Tarifa no calculada")
+        self.suitcase_entry.delete(0, tk.END)
+        self.suitcase_count_entry.delete(0, tk.END)
+        self.lluvia_var.set(False)
+        self.evento_var.set(False)
