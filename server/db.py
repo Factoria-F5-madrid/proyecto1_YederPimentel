@@ -1,1 +1,3 @@
-#empezamos a crear el backend
+from flask_sqlalchemy import SQLAlchemy # type:ignore
+
+db = SQLAlchemy()
