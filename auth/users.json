@@ -4,5 +4,8 @@
     },
     "yeder1": {
         "password": "$2b$12$Ws1aibNrl2rWcCatMyDbHuvnfBPhoqwBLuzZRhnhBkwJM0bj5/XKC"
+    },
+    "johan": {
+        "password": "$2b$12$cIxc9kKIirBsdOftfaVGf.begIvzzq7h6WSO75R1w0uUlx6D32eUG"
     }
 }

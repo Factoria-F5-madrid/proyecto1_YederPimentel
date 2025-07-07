@@ -1,4 +1,4 @@
-from extensions import db
+from extensions import db # type:ignore
 from datetime import datetime
 
 class Trip(db.Model):
