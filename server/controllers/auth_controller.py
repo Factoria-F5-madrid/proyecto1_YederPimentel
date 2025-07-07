@@ -1,8 +1,9 @@
+from urllib import request
 from flask import jsonify  # type: ignore
 from models.user import User
 from extensions import db  # type: ignore
 import bcrypt  # type: ignore
-import jwt  # type: ignore
+from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity  # type: ignore
 import datetime
 from flask import current_app as app  # type: ignore
 
@@ -38,13 +39,24 @@ def login_user(data):
     if not user or not bcrypt.checkpw(password.encode("utf-8"), user.password):
         return jsonify({"error": "Invalid credentials"}), 401
 
-    # Generar token JWT
-    token = jwt.encode({
-        "id": user.id,
-        "exp": datetime.datetime.utcnow() + datetime.timedelta(hours=12)
-    }, app.config["SECRET_KEY"], algorithm="HS256")
+    # ✅ Crear token válido para flask_jwt_extended
+    access_token = create_access_token(identity=str(user.id))
+
 
     return jsonify({
-        "token": token,
+        "token": access_token, # type: ignore
+        "username": user.username # type: ignore
+    }), 200
+
+@jwt_required()
+def profile_user():
+    current_user_id = get_jwt_identity()
+    user = User.query.get(current_user_id)
+
+    if not user:
+        return jsonify({"msg": "Usuario no encontrado"}), 404
+
+    return jsonify({
+        "id": user.id,
         "username": user.username
     }), 200
