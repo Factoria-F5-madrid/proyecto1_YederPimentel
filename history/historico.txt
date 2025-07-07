@@ -86,3 +86,19 @@ Maletas cargadas: 2.0
 Precio total: 4.31 €
 ========================
 
+==== Nuevo Trayecto ====
+Fecha y hora: 2025-07-07 12:39:16
+Tiempo detenido: 3.0 segundos
+Tiempo en movimiento: 4.5 segundos
+Maletas cargadas: 1
+Precio total: 2.38 €
+========================
+
+==== Nuevo Trayecto ====
+Fecha y hora: 2025-07-07 13:07:29
+Tiempo detenido: 1.9 segundos
+Tiempo en movimiento: 3.0 segundos
+Maletas cargadas: 2.0
+Precio total: 4.19 €
+========================
+

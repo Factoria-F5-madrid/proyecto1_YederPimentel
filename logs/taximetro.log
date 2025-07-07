@@ -126,3 +126,13 @@
 2025-07-07 00:40:31,124 - INFO - Trayecto finalizado
 2025-07-07 00:40:32,928 - INFO - Se ha generado un recibo de viaje.
 2025-07-07 00:40:36,390 - INFO - El usuario ha salido del programa
+2025-07-07 12:39:16,454 - INFO - Se ha generado un recibo de viaje.
+2025-07-07 13:07:09,155 - INFO - Se ha iniciado el programa.
+2025-07-07 13:07:24,159 - INFO - Se ha introducido el comando: start
+2025-07-07 13:07:24,159 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-07 13:07:26,095 - INFO - Se ha introducido el comando: moving
+2025-07-07 13:07:26,096 - INFO - Estado cambiado a: moving
+2025-07-07 13:07:29,143 - INFO - Se ha introducido el comando: finish
+2025-07-07 13:07:29,155 - INFO - Trayecto finalizado
+2025-07-07 13:07:30,865 - INFO - Se ha generado un recibo de viaje.
+2025-07-07 13:07:36,760 - INFO - El usuario ha salido del programa

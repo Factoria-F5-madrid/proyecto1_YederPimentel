@@ -1,5 +1,8 @@
 {
     "yeder": {
         "password": "$2b$12$V6pdeV4l4zz31/NIm8xsjugxlYVVSAQbDgr4VCxUbITAAqJE9hWHK"
+    },
+    "yeder1": {
+        "password": "$2b$12$Ws1aibNrl2rWcCatMyDbHuvnfBPhoqwBLuzZRhnhBkwJM0bj5/XKC"
     }
 }

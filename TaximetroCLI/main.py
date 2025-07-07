@@ -1,13 +1,16 @@
 import sys
 import os
 
+# Ajustar path para imports
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from auth.auth import login, register, verify_token
-from taximetro import Taximetro
+
+from auth.auth import login, register
+from TaximetroCLI.taximetro import Taximetro  # Importar el taxímetro CLI
 
 def main():
-    print("🚕 Bienvenido al Taxímetro con Autenticación")
+    print("🚕 Bienvenido al Taxímetro CLI con Autenticación")
 
+    username = ""
     while True:
         choice = input("¿Quieres (r)egistrarte o (l)ogearte? (r/l): ").strip().lower()
         if choice == "r":
@@ -22,18 +25,16 @@ def main():
             password = input("Contraseña: ").strip()
             success, result = login(username, password)
             if success:
-                print("✅ Login correcto!")
-                print(f"Tu token es: {result}")  # opcional, para debug
-                # Aquí podrías verificar el token o guardarlo si quieres
+                print(f"✅ Login correcto, ¡bienvenido {username}!\n")
                 break
             else:
                 print(result)
         else:
             print("Opción no válida. Elige 'r' o 'l'.")
 
-    # Si llegamos aquí, el usuario está autenticado:
-    app = Taximetro()
-    app.run()
+    # ✅ Ejecutar el taxímetro CLI
+    taximetro = Taximetro()
+    taximetro.run()
 
 if __name__ == "__main__":
     main()
