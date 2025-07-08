@@ -1,5 +1,6 @@
 import sys
 import os
+import getpass  # ✅ Importar getpass para ocultar la contraseña
 
 # Ajustar path para imports
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
@@ -15,14 +16,14 @@ def main():
         choice = input("¿Quieres (r)egistrarte o (l)ogearte? (r/l): ").strip().lower()
         if choice == "r":
             username = input("Usuario: ").strip()
-            password = input("Contraseña: ").strip()
+            password = getpass.getpass("Contraseña: ")  # ✅ Ocultar durante registro
             success, msg = register(username, password)
             print(msg)
             if success:
                 print("Ahora inicia sesión.")
         elif choice == "l":
             username = input("Usuario: ").strip()
-            password = input("Contraseña: ").strip()
+            password = getpass.getpass("Contraseña: ")  # ✅ Ocultar durante login
             success, result = login(username, password)
             if success:
                 print(f"✅ Login correcto, ¡bienvenido {username}!\n")

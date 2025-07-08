@@ -4,9 +4,6 @@ import bcrypt # type: ignore
 import jwt    # type: ignore
 from datetime import datetime, timedelta
 
-# --- Configurar ruta absoluta para users.json en la carpeta auth de la raíz del proyecto ---
-
-# Ruta absoluta del directorio donde está este archivo (auth.py)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Subimos un nivel para llegar a la raíz del proyecto

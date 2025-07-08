@@ -158,3 +158,107 @@ Maletas cargadas: 2.0
 Precio total: 4.14 €
 ========================
 
+==== Nuevo Trayecto ====
+Fecha y hora: 2025-07-08 08:22:34
+Tiempo detenido: 1.6 segundos
+Tiempo en movimiento: 5.0 segundos
+Maletas cargadas: 2.0
+Precio total: 4.34 €
+========================
+
+==== Nuevo Trayecto ====
+Fecha y hora: 2025-07-08 08:23:52
+Tiempo detenido: 2.8 segundos
+Tiempo en movimiento: 3.4 segundos
+Maletas cargadas: 2
+Precio total: 4.82 €
+========================
+
+==== Nuevo Trayecto ====
+Fecha y hora: 2025-07-08 08:36:21
+Tiempo detenido: 2.7 segundos
+Tiempo en movimiento: 3.8 segundos
+Maletas cargadas: 2.0
+Precio total: 4.29 €
+========================
+
+==== Nuevo Trayecto ====
+Fecha y hora: 2025-07-08 08:41:06
+Tiempo detenido: 1.1 segundos
+Tiempo en movimiento: 3.3 segundos
+Maletas cargadas: 2.0
+Precio total: 4.67 €
+========================
+
+==== Nuevo Trayecto ====
+Fecha y hora: 2025-07-08 08:41:52
+Tiempo detenido: 2.4 segundos
+Tiempo en movimiento: 5.0 segundos
+Maletas cargadas: 2
+Precio total: 5.08 €
+========================
+
+==== Nuevo Trayecto ====
+Fecha y hora: 2025-07-08 09:07:41
+Tiempo detenido: 2.2 segundos
+Tiempo en movimiento: 1.6 segundos
+Maletas cargadas: 2.0
+Precio total: 4.16 €
+========================
+
+==== Nuevo Trayecto ====
+Fecha y hora: 2025-07-08 09:20:05
+Tiempo detenido: 1.0 segundos
+Tiempo en movimiento: 1.8 segundos
+Maletas cargadas: 2.0
+Precio total: 4.14 €
+========================
+
+==== Nuevo Trayecto ====
+Fecha y hora: 2025-07-08 09:20:53
+Tiempo detenido: 2.3 segundos
+Tiempo en movimiento: 2.1 segundos
+Maletas cargadas: 2
+Precio total: 4.39 €
+========================
+
+==== Nuevo Trayecto ====
+Fecha y hora: 2025-07-08 09:21:23
+Tiempo detenido: 1.7 segundos
+Tiempo en movimiento: 1.6 segundos
+Maletas cargadas: 2
+Precio total: 4.29 €
+========================
+
+==== Nuevo Trayecto ====
+Fecha y hora: 2025-07-08 09:21:57
+Tiempo detenido: 1.1 segundos
+Tiempo en movimiento: 2.8 segundos
+Maletas cargadas: 2.0
+Precio total: 4.20 €
+========================
+
+==== Nuevo Trayecto ====
+Fecha y hora: 2025-07-08 11:44:52
+Tiempo detenido: 2.3 segundos
+Tiempo en movimiento: 2.5 segundos
+Maletas cargadas: 2.0
+Precio total: 4.44 €
+========================
+
+==== Nuevo Trayecto ====
+Fecha y hora: 2025-07-08 11:45:40
+Tiempo detenido: 2.0 segundos
+Tiempo en movimiento: 2.4 segundos
+Maletas cargadas: 2
+Precio total: 4.40 €
+========================
+
+==== Nuevo Trayecto ====
+Fecha y hora: 2025-07-08 11:56:51
+Tiempo detenido: 2.6 segundos
+Tiempo en movimiento: 1.5 segundos
+Maletas cargadas: 2
+Precio total: 4.33 €
+========================
+

@@ -148,3 +148,73 @@
 2025-07-07 14:22:45,984 - INFO - Trayecto finalizado
 2025-07-07 14:22:47,677 - INFO - Se ha generado un recibo de viaje.
 2025-07-07 14:22:49,381 - INFO - El usuario ha salido del programa
+2025-07-08 08:22:16,367 - INFO - Se ha iniciado el programa.
+2025-07-08 08:22:28,266 - INFO - Se ha introducido el comando: start
+2025-07-08 08:22:28,266 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-08 08:22:29,889 - INFO - Se ha introducido el comando: moving
+2025-07-08 08:22:29,889 - INFO - Estado cambiado a: moving
+2025-07-08 08:22:34,873 - INFO - Se ha introducido el comando: finish
+2025-07-08 08:22:34,886 - INFO - Trayecto finalizado
+2025-07-08 08:22:37,316 - INFO - Se ha generado un recibo de viaje.
+2025-07-08 08:22:46,057 - INFO - El usuario ha salido del programa
+2025-07-08 08:23:54,347 - INFO - Se ha generado un recibo de viaje.
+2025-07-08 08:35:53,168 - INFO - Se ha iniciado el programa.
+2025-07-08 08:36:14,779 - INFO - Se ha introducido el comando: start
+2025-07-08 08:36:14,779 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-08 08:36:17,468 - INFO - Se ha introducido el comando: moving
+2025-07-08 08:36:17,469 - INFO - Estado cambiado a: moving
+2025-07-08 08:36:21,220 - INFO - Se ha introducido el comando: finish
+2025-07-08 08:36:21,226 - INFO - Trayecto finalizado
+2025-07-08 08:36:36,469 - INFO - El usuario ha salido del programa
+2025-07-08 08:37:12,137 - INFO - Se ha iniciado el programa.
+2025-07-08 08:40:54,236 - INFO - Se ha iniciado el programa.
+2025-07-08 08:41:02,462 - INFO - Se ha introducido el comando: start
+2025-07-08 08:41:02,462 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-08 08:41:03,540 - INFO - Se ha introducido el comando: moving
+2025-07-08 08:41:03,541 - INFO - Estado cambiado a: moving
+2025-07-08 08:41:06,836 - INFO - Se ha introducido el comando: finish
+2025-07-08 08:41:06,843 - INFO - Trayecto finalizado
+2025-07-08 08:41:08,181 - INFO - Se ha generado un recibo de viaje.
+2025-07-08 08:41:10,421 - INFO - El usuario ha salido del programa
+2025-07-08 08:41:53,998 - INFO - Se ha generado un recibo de viaje.
+2025-07-08 09:07:29,087 - INFO - Se ha iniciado el programa.
+2025-07-08 09:07:37,561 - INFO - Se ha introducido el comando: start
+2025-07-08 09:07:37,561 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-08 09:07:39,778 - INFO - Se ha introducido el comando: moving
+2025-07-08 09:07:39,779 - INFO - Estado cambiado a: moving
+2025-07-08 09:07:41,417 - INFO - Se ha introducido el comando: finish
+2025-07-08 09:07:41,423 - INFO - Trayecto finalizado
+2025-07-08 09:07:44,131 - INFO - Se ha generado un recibo de viaje.
+2025-07-08 09:07:46,801 - INFO - El usuario ha salido del programa
+2025-07-08 09:19:49,853 - INFO - Se ha iniciado el programa.
+2025-07-08 09:20:02,579 - INFO - Se ha introducido el comando: start
+2025-07-08 09:20:02,579 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-08 09:20:03,603 - INFO - Se ha introducido el comando: moving
+2025-07-08 09:20:03,604 - INFO - Estado cambiado a: moving
+2025-07-08 09:20:05,395 - INFO - Se ha introducido el comando: finish
+2025-07-08 09:20:05,401 - INFO - Trayecto finalizado
+2025-07-08 09:20:07,156 - INFO - Se ha generado un recibo de viaje.
+2025-07-08 09:20:09,555 - INFO - El usuario ha salido del programa
+2025-07-08 09:20:55,350 - INFO - Se ha generado un recibo de viaje.
+2025-07-08 09:21:24,778 - INFO - Se ha generado un recibo de viaje.
+2025-07-08 09:21:44,850 - INFO - Se ha iniciado el programa.
+2025-07-08 09:21:53,203 - INFO - Se ha introducido el comando: start
+2025-07-08 09:21:53,204 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-08 09:21:54,339 - INFO - Se ha introducido el comando: moving
+2025-07-08 09:21:54,339 - INFO - Estado cambiado a: moving
+2025-07-08 09:21:57,123 - INFO - Se ha introducido el comando: finish
+2025-07-08 09:21:57,135 - INFO - Trayecto finalizado
+2025-07-08 09:21:59,422 - INFO - Se ha generado un recibo de viaje.
+2025-07-08 09:22:19,253 - INFO - El usuario ha salido del programa
+2025-07-08 10:45:33,554 - INFO - Se ha iniciado el programa.
+2025-07-08 11:44:23,119 - INFO - Se ha iniciado el programa.
+2025-07-08 11:44:47,346 - INFO - Se ha introducido el comando: start
+2025-07-08 11:44:47,346 - INFO - Se ha iniciado un nuevo trayecto.
+2025-07-08 11:44:49,658 - INFO - Se ha introducido el comando: moving
+2025-07-08 11:44:49,659 - INFO - Estado cambiado a: moving
+2025-07-08 11:44:52,138 - INFO - Se ha introducido el comando: finish
+2025-07-08 11:44:52,150 - INFO - Trayecto finalizado
+2025-07-08 11:44:59,748 - INFO - Se ha generado un recibo de viaje.
+2025-07-08 11:45:04,850 - INFO - El usuario ha salido del programa
+2025-07-08 11:45:43,513 - INFO - Se ha generado un recibo de viaje.
+2025-07-08 11:56:52,615 - INFO - Se ha generado un recibo de viaje.

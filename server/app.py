@@ -11,18 +11,18 @@ import os
 
 def create_app():
     app = Flask(__name__)
-    app.config.from_object(Config)  # puedes usar directamente Config
+    app.config.from_object(Config)  
 
     CORS(app)
     db.init_app(app)
-    jwt.init_app(app)  #
-    JWTManager(app)  # 👈 ¡Esto es lo que te falta!
+    jwt.init_app(app)  
+    JWTManager(app)  
 
     app.register_blueprint(auth_bp, url_prefix="/api/auth")
     app.register_blueprint(trip_bp, url_prefix="/api/trips")
 
     with app.app_context():
-        from models import user, trip  # 👈 asegura que las tablas se crean
+        from models import user, trip  # 
         db.create_all()
     
     return app

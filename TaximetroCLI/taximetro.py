@@ -6,12 +6,12 @@ import logging
 
 class Taximetro:
     def __init__(self):
-        # Ruta absoluta a la raíz del proyecto (una carpeta arriba de TaximetroCLI)
+        
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         self.log_dir = os.path.join(base_dir, "logs")
         self.history_dir = os.path.join(base_dir, "history")
 
-        # Crear carpetas si no existen
+        
         os.makedirs(self.log_dir, exist_ok=True)
         os.makedirs(self.history_dir, exist_ok=True)
 
@@ -76,15 +76,19 @@ class Taximetro:
 
         return stop_rate, moving_rate, razones, multiplicador
 
-
     def run(self):
         print("🚕 Bienvenido al Taxímetro CLI")
         print("Este programa calcula el coste de un trayecto en taxi.")
         logging.info("Se ha iniciado el programa.")
 
         while True:
+            # Preguntar condiciones especiales
+            lluvia = input("¿Está lloviendo? (s/n): ").strip().lower() == "s"
+            evento = input("¿Hay un evento especial? (s/n): ").strip().lower() == "s"
+
+            # Obtener tarifas base y aplicar multiplicadores
             stop_rate_base, moving_rate_base, franja = self.get_time_based_rates()
-            stop_rate, moving_rate, razones, multiplicador = self.apply_multipliers(stop_rate_base, moving_rate_base)
+            stop_rate, moving_rate, razones, multiplicador = self.apply_multipliers(stop_rate_base, moving_rate_base, lluvia, evento)
 
             print(f"\n💡 Tarifa automática aplicada ({franja})")
             print(f"  ➤ Precio por segundo detenido: {stop_rate:.3f} €/s")

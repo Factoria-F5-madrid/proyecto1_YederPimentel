@@ -1,5 +1,6 @@
 import React from 'react';
 import UpcomingReleases from './components/UpcomingReleases';
+import './'
 
 const App = () => {
   return (

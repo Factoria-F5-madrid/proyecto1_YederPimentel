@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 function Home() {
   return (
     <div className="max-w-3xl mx-auto mt-10 p-6 bg-white rounded shadow">
