@@ -1,8 +1,11 @@
-// src/components/Footer.jsx
 function Footer() {
   return (
-    <footer className="bg-gray-100 text-center text-gray-600 py-4 mt-10">
-      © {new Date().getFullYear()} TaxiMeter · Todos los derechos reservados.
+    <footer className="bg-blue-600 text-center text-sm text-white py-4 mt-auto">
+      <div className="max-w-6xl mx-auto px-4">
+        © {new Date().getFullYear()}{" "}
+        <span className="font-semibold">TaxiMeter</span> · Todos los derechos
+        reservados.
+      </div>
     </footer>
   );
 }

@@ -1,7 +1,7 @@
-import { useEffect, useState, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
-import API from '../services/userService';
-import { saveTrip, getTrips } from '../services/tripService';
+import { useEffect, useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import API from "../services/userService";
+import { saveTrip, getTrips } from "../services/tripService";
 
 function Dashboard() {
   const [user, setUser] = useState(null);
@@ -25,26 +25,26 @@ function Dashboard() {
       const res = await getTrips();
       setHistorial(res.data);
     } catch (err) {
-      console.error('Error al cargar historial', err);
+      console.error("Error al cargar historial", err);
     }
   };
 
   // Cargar usuario e historial al montar
   useEffect(() => {
-    const token = localStorage.getItem('token');
+    const token = localStorage.getItem("token");
     if (!token) {
-      navigate('/login');
+      navigate("/login");
       return;
     }
 
     const fetchUser = async () => {
       try {
-        const res = await API.get('/profile');
+        const res = await API.get("/profile");
         setUser(res.data.user);
       } catch (err) {
-        console.error('Error al obtener usuario', err);
-        localStorage.removeItem('token');
-        navigate('/login');
+        console.error("Error al obtener usuario", err);
+        localStorage.removeItem("token");
+        navigate("/login");
       }
     };
 
@@ -108,8 +108,8 @@ function Dashboard() {
       // 🆕 ACTUALIZAR HISTORIAL AUTOMÁTICAMENTE
       fetchTrips();
     } catch (err) {
-      console.error('Error al guardar viaje:', err);
-      alert('Error al guardar el viaje.');
+      console.error("Error al guardar viaje:", err);
+      alert("Error al guardar el viaje.");
     }
 
     // Reiniciar estado
@@ -127,11 +127,19 @@ function Dashboard() {
       {/* Controles de condiciones especiales */}
       <div className="flex gap-4">
         <label>
-          <input type="checkbox" checked={llueve} onChange={() => setLlueve(!llueve)} />
+          <input
+            type="checkbox"
+            checked={llueve}
+            onChange={() => setLlueve(!llueve)}
+          />
           <span className="ml-2">¿Está lloviendo? 🌧️</span>
         </label>
         <label>
-          <input type="checkbox" checked={evento} onChange={() => setEvento(!evento)} />
+          <input
+            type="checkbox"
+            checked={evento}
+            onChange={() => setEvento(!evento)}
+          />
           <span className="ml-2">¿Hay evento especial? 🎉</span>
         </label>
       </div>
@@ -162,10 +170,12 @@ function Dashboard() {
             <button
               onClick={() => setEnMovimiento(!enMovimiento)}
               className={`px-4 py-2 rounded text-white ${
-                enMovimiento ? 'bg-yellow-500 hover:bg-yellow-600' : 'bg-blue-600 hover:bg-blue-700'
+                enMovimiento
+                  ? "bg-yellow-500 hover:bg-yellow-600"
+                  : "bg-blue-600 hover:bg-blue-700"
               }`}
             >
-              {enMovimiento ? 'Parar movimiento' : 'Iniciar movimiento'}
+              {enMovimiento ? "Parar movimiento" : "Iniciar movimiento"}
             </button>
             <button
               onClick={finalizarViaje}
@@ -192,7 +202,10 @@ function Dashboard() {
           <ul className="space-y-2">
             {historial.map((trip) => (
               <li key={trip.id} className="border rounded p-3 bg-gray-50">
-                <p><strong>🕒 Fecha:</strong> {new Date(trip.timestamp).toLocaleString()}</p>
+                <p>
+                  <strong>🕒 Fecha:</strong>{" "}
+                  {new Date(trip.timestamp).toLocaleString()}
+                </p>
                 <p>🛑 Parado: {trip.stopped_time}s</p>
                 <p>🚗 Movimiento: {trip.moving_time}s</p>
                 <p>🧳 Maletas: {trip.suitcase_count}</p>

@@ -1,13 +1,14 @@
-import { createBrowserRouter } from 'react-router-dom';
-import Home from '../pages/Home';
-import Login from '../pages/Login';
-import Layout from '../layout/Layout';
-import Register from '../pages/Register';
-import Dashboard from '../pages/Dashboard';
+import { createBrowserRouter } from "react-router-dom";
+import Home from "../pages/Home";
+import Login from "../pages/Login";
+import Layout from "../layout/Layout";
+import Register from "../pages/Register";
+import Dashboard from "../pages/Dashboard";
+import Suggestions from "../pages/Suggestions";
 
 const routes = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Layout />,
     children: [
       {
@@ -15,16 +16,20 @@ const routes = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/login',
+        path: "/login",
         element: <Login />,
       },
       {
-        path: '/register',
+        path: "/register",
         element: <Register />,
       },
       {
-        path: '/dashboard',
+        path: "/dashboard",
         element: <Dashboard />,
+      },
+      {
+        path: "/suggestions",
+        element: <Suggestions />,
       },
     ],
   },
