@@ -1,77 +1,74 @@
-// src/pages/Login.jsx
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import API from '../services/userService';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import API from "../services/userService";
 
 function Login() {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
-    username: '',
-    password: ''
+    username: "",
+    password: "",
   });
 
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
+    setError("");
 
     try {
-      const res = await API.post('/login', formData);
+      const res = await API.post("/login", formData);
       const { token } = res.data;
-
-      // Guardar el token en localStorage
-      localStorage.setItem('token', token);
-
-      // Redirigir al dashboard
-      navigate('/dashboard');
+      localStorage.setItem("token", token);
+      navigate("/dashboard");
     } catch (err) {
       console.error(err);
-      setError(err.response?.data?.message || 'Error durante el login');
+      setError(err.response?.data?.message || "Error durante el login");
     }
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded shadow">
-      <h2 className="text-2xl font-bold mb-4">Iniciar sesión</h2>
-      {error && <p className="text-red-500">{error}</p>}
+    <div className="flex items-center justify-center min-h-[calc(100vh-160px)] px-4">
+      <div className="w-full max-w-xl bg-white p-10 rounded-lg shadow-lg">
+        <h2 className="text-3xl font-bold mb-6 text-center">Iniciar sesión</h2>
+        {error && <p className="text-red-500 mb-4 text-center">{error}</p>}
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <input
-          type="text"
-          name="username"
-          placeholder="Usuario"
-          value={formData.username}
-          onChange={handleChange}
-          className="border border-gray-300 p-2 rounded"
-          required
-        />
+        <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+          <input
+            type="text"
+            name="username"
+            placeholder="Usuario"
+            value={formData.username}
+            onChange={handleChange}
+            className="border border-gray-300 p-3 rounded"
+            required
+          />
 
-        <input
-          type="password"
-          name="password"
-          placeholder="Contraseña"
-          value={formData.password}
-          onChange={handleChange}
-          className="border border-gray-300 p-2 rounded"
-          required
-        />
+          <input
+            type="password"
+            name="password"
+            placeholder="Contraseña"
+            value={formData.password}
+            onChange={handleChange}
+            className="border border-gray-300 p-3 rounded"
+            required
+          />
 
-        <button
-          type="submit"
-          className="bg-green-600 text-white py-2 rounded hover:bg-green-700 transition"
-        >
-          Iniciar sesión
-        </button>
-      </form>
+          <button
+            type="submit"
+            className="bg-green-600 text-white py-3 rounded hover:bg-green-700 transition"
+          >
+            Iniciar sesión
+          </button>
+        </form>
+      </div>
     </div>
   );
 }

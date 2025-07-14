@@ -92,7 +92,7 @@ function Navbar() {
               </button>
             </>
           )}
-          <Link to="/sugerencias" className="block hover:underline">
+          <Link to="/suggestions" className="block hover:underline">
             Sugerencias
           </Link>
         </div>
