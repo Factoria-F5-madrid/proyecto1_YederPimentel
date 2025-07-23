@@ -36,7 +36,7 @@ const Suggestions = () => {
           ¿Tienes una sugerencia?
         </h1>
         <p className="text-gray-600 mb-5 text-sm sm:text-base">
-          Cuéntanos qué mejorarías o añadirías a TaxiMeter. Tu opinión nos ayuda
+          Cuéntanos qué mejorarías o añadirías a TaxiMeter F5. Tu opinión nos ayuda
           a seguir creciendo. 🚖
         </p>
 

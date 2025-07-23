@@ -12,9 +12,9 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-blue-600 text-white px-6 py-4">
+    <nav className="bg-blue-900 text-white px-6 py-4">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <div className="text-xl font-bold">TaxiMeter</div>
+        <div className="text-xl font-bold">TaxiMeter F5</div>
 
         {/* Botón hamburguesa */}
         <button

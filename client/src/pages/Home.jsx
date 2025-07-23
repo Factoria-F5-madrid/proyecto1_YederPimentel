@@ -24,12 +24,12 @@ function Home() {
       <img src={taxiImage} alt="Taxi" className="w-48 h-auto mx-auto mb-8" />
 
       {/* Título */}
-      <h1 className="text-4xl font-bold text-blue-700 mb-4">
-        Bienvenido a TaxiMeter 🚖
+      <h1 className="text-4xl font-bold text-yellow-500 mb-4">
+        Bienvenido a TaxiMeter F5 🚖
       </h1>
 
       {/* Texto descriptivo */}
-      <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+      <p className="text-lg text-gray-900 mb-4 leading-relaxed">
         TaxiMeter es tu asistente digital para calcular tarifas de taxi en
         tiempo real. Controla los segundos que tu taxi pasa detenido o en
         movimiento, añade recargos por maletas, condiciones meteorológicas o
@@ -37,7 +37,7 @@ function Home() {
         el trayecto.
       </p>
 
-      <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+      <p className="text-lg text-gray-900 mb-4 leading-relaxed">
         Nuestra plataforma está pensada para ser fácil de usar, rápida y
         accesible desde cualquier dispositivo. Tanto si eres un taxista
         profesional como si estás desarrollando una app educativa, esta
@@ -46,7 +46,7 @@ function Home() {
       </p>
 
       {!isLoggedIn && (
-        <p className="text-md text-gray-600 mt-6 font-medium">
+        <p className="text-md text-gray-800 mt-6 font-medium">
           Regístrate o inicia sesión para comenzar a usar el taxímetro digital.
         </p>
       )}
