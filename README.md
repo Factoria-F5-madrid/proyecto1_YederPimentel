@@ -13,7 +13,7 @@ Este proyecto es una aplicación de **taxímetro digital** con interfaz gráfica
 ## 🖼️ Vista previa
 
 <!-- Reemplaza esta URL con la tuya -->
-![Vista previa del taxímetro](https://tu-url-de-la-imagen.com/taximetro-preview.png)
+![Vista previa del taxímetro](client/src/assets/TaximetroDashboard.png)
 
 ---
 
